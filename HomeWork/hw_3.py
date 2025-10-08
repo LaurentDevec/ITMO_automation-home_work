@@ -46,29 +46,29 @@ def calculate_days(years, months):
     total_days = total_months * 29
     print(total_days)
 
-        # Примеры использования функций:
-        print("Задача 2:")
-        find_max_number(5, 10)  # Выведет: 10
-        find_max_number(-3, -1)  # Выведет: -1
+# Примеры использования функций:
+print("Задача 2:")
+find_max_number(5, 10)  # Выведет: 10
+find_max_number(-3, -1)  # Выведет: -1
 
-        print("\nЗадача 3:")
-        check_difference(100, 235)  # Выведет: yes
-        check_difference(100, 200)  # Выведет: No
+print("\nЗадача 3:")
+check_difference(100, 235)  # Выведет: yes
+check_difference(100, 200)  # Выведет: No
 
-        print("\nЗадача 4:")
-        get_season(3)  # Выведет: весна
-        get_season(7)  # Выведет: лето
-        get_season(12)  # Выведет: зима
+print("\nЗадача 4:")
+get_season(3)  # Выведет: весна
+get_season(7)  # Выведет: лето
+get_season(12)  # Выведет: зима
 
-        print("\nЗадача 5:")
-        check_all_greater_than_ten(15, 20, 25)  # Выведет: yes
-        check_all_greater_than_ten(15, 5, 25)  # Выведет: no
+print("\nЗадача 5:")
+check_all_greater_than_ten(15, 20, 25)  # Выведет: yes
+check_all_greater_than_ten(15, 5, 25)  # Выведет: no
 
-        print("\nЗадача 6:")
-        count_positive_numbers([-1, 2, -3, 4, 5])  # Выведет: 3
-        count_positive_numbers([1, 2, 3, 4, 5])  # Выведет: 5
-        count_positive_numbers([-1, -2, -3, -4, -5])  # Выведет: 0
+print("\nЗадача 6:")
+count_positive_numbers([-1, 2, -3, 4, 5])  # Выведет: 3
+count_positive_numbers([1, 2, 3, 4, 5])  # Выведет: 5
+count_positive_numbers([-1, -2, -3, -4, -5])  # Выведет: 0
 
-        print("\nЗадача 7:")
-        calculate_days(2, 3)  # Выведет: 783 (2 года * 12 месяцев + 3 месяца = 27 месяцев * 29 дней)
-        calculate_days(0, 5)  # Выведет: 145 (5 месяцев * 29 дней)
+print("\nЗадача 7:")
+calculate_days(2, 3)  # Выведет: 783 (2 года * 12 месяцев + 3 месяца = 27 месяцев * 29 дней)
+calculate_days(0, 5)  # Выведет: 145 (5 месяцев * 29 дней)
