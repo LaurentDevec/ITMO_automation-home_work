@@ -40,19 +40,85 @@ class Math:
 
     def multiplication(self):
         result = self.a * self.b
-        print(f"Умножение: {self.a} * {self.b} = {result}")
+        print(f"Умножение: {self.a} × {self.b} = {result}")
         return result
 
     def division(self):
-        if self.b != 0:
-            result = self.a / self.b
-            print(f"Деление: {self.a} / {self.b} = {result}")
-            return result
-        else:
+        if self.b == 0:
             print("Ошибка: деление на ноль!")
             return None
+        result = self.a / self.b
+        print(f"Деление: {self.a} ÷ {self.b} = {result}")
+        return result
 
     def subtraction(self):
         result = self.a - self.b
         print(f"Вычитание: {self.a} - {self.b} = {result}")
         return result
+
+class SidebarButton:
+    def __init__(self, button_text):
+        self.text = button_text
+        self.type = "Кнопка"
+        self.locator = ""
+
+    def click(self):
+        return f"Клик по кнопке {{{self.text}}}"
+
+# Создание объектов для кнопок
+buttons_data = [
+    "Text Box", "Check Box", "Radio Button", "Web Tables",
+    "Buttons", "Links", "Broken Links - Images",
+    "Upload and Download", "Dynamic Properties"
+]
+
+buttons = [SidebarButton(text) for text in buttons_data]
+
+# Вывод текста и клики
+for button in buttons:
+    print(f"Текст кнопки: {button.text}")
+    print(f"Тип: {button.type}")
+    print(f"Локатор: {button.locator}")
+    print(button.click())
+    print("---")
+
+
+class Car:
+    def __init__(self, color="", type="", year=""):
+        self.color = color
+        self.type = type
+        self.year = year
+
+    def start(self):
+        print("Автомобиль заведен")
+
+    def stop(self):
+        print("Автомобиль заглушен")
+
+    def set_year(self, year):
+        self.year = year
+        print(f"Год выпуска установлен: {year}")
+
+    def set_type(self, type):
+        self.type = type
+        print(f"Тип автомобиля установлен: {type}")
+
+    def set_color(self, color):
+        self.color = color
+        print(f"Цвет автомобиля установлен: {color}")
+
+    def get_info(self):
+        return f"Автомобиль: {self.color} {self.type} {self.year} года"
+
+
+# Пример использования
+if __name__ == "__main__":
+    my_car = Car()
+    my_car.set_color("Красный")
+    my_car.set_type("Седан")
+    my_car.set_year(2022)
+    my_car.start()
+    print(my_car.get_info())
+    my_car.stop()
+
+
