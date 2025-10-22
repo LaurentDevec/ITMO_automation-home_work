@@ -1,10 +1,11 @@
 import base.py
 from selenium.webdriver.common.by import By
-
+from base_page import Base
 
 class Test_check_text:
 
     def test_footer_text(self, driver):
+        page = Base(driver)
         """
         Test Case 1: Проверка текста в подвале на главной странице
         """
@@ -15,14 +16,14 @@ class Test_check_text:
         footer_locator = (By.XPATH, "//footer//span")
 
         # Используем метод get_text для получения текста
-        from base_page import Base
-        page = Base(driver)
+        
         actual_text = page.get_text(*footer_locator)
 
         expected_text = '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
         assert actual_text == expected_text, f"Ожидался текст: '{expected_text}', но получен: '{actual_text}'"
 
     def test_center_text_on_elements_page(self, driver):
+        page = Base(driver)
         """
         Test Case 2: Проверка текста по центру на странице Elements
         """
@@ -41,9 +42,8 @@ class Test_check_text:
                                "//div[contains(@class, 'col-md-6') and contains(text(), 'Please select an item')]")
 
         # Используем метод get_text для получения текста
-        from base_page import Base
-        page = Base(driver)
         actual_text = page.get_text(*center_text_locator)
 
         expected_text = 'Please select an item from left to start practice.'
         assert actual_text == expected_text, f"Ожидался текст: '{expected_text}
+
